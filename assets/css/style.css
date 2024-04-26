@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@media screen and (min-width:950px) {
+    header{
+        text-align: center;
+        padding: 12% 30% !important;
+    }
+    .headerButtons{
+        padding: 0% 2%;
+        width: auto !important;
+    }
+    #divHeaderButtons{
+        text-align: center;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .section-white{
+        display: grid !important;
+        grid-template-columns: 62% 38% !important;
+        grid-template-areas: 
+        "image text"
+         !important;
+        padding: 0% 18% !important;
+        place-items: center !important;
+    }
+    .section-grey{
+        display: grid !important;
+        grid-template-columns: 38% 62% !important;
+        grid-template-areas: 
+        "text image"
+         !important;
+        padding: 0% 18% !important;
+        place-items: center !important;
+    }
+    .section-grey .textSection{
+        grid-area: text !important;
+        margin-left: 15%;
+        margin-right: 0%;
+    }
+    .section-white img, .section-grey img{
+        grid-area: image !important;
+    }
+
+    .section-white .textSection{
+        grid-area: text !important;
+        margin-right: 15%;
+    }
+    .section-white .textSection h2, .section-grey .textSection h2{
+        width: 80% !important;
+        font-size: 2rem !important;
+        font-weight: 800 !important;
+    }
+    .section-wide .textSection{
+        text-align: center !important;
+        padding: 0% 25% !important;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1.6fr 0.2fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main"
+    "footer"
+    ;
+    font-family: "Open Sans", sans-serif;
+}
+h1{
+    padding: 0;
+    margin: 0;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffff;
+}
+header{
+    background-image: url(/assets/images/headerBackground.png);
+    color: #ffff;
+    background-position: 74% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 9% 8%;
+    grid-area: header;
+}
+.headerButtons{
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+    margin: 2% 0%;
+    border-radius: 20px 20px;
+    font-family: "Open Sans", sans-serif;
+}
+#buttonOpenInBrowser{
+    background-color: rgba(35, 39, 42, 1);
+    color: rgba(255, 255, 255, 1);
+}
+#buttonDownloadToWindows{
+    background-color: rgba(255, 255, 255, 1);
+    
+}
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(3,1fr) 1.6fr;
+    grid-template-areas: 
+    "section1"
+    "section2"
+    "section3"
+    "section-wide"
+    ;
+}
+.section-white, .section-grey{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0% 10%;
+}
+.section-grey{
+    background-color: rgba(246, 246, 246, 1);
+}
+img{
+    max-width: 100%;
+}
+#section1{
+    grid-area: section1;
+}
+#section2{
+    
+    grid-area: section2;
+}
+
+#section3{
+    grid-area: section3;
+}
+
+.section-wide{
+    background-color: rgba(246, 246, 246, 1);
+    grid-area: section-wide;
+    padding: 5%;
+    text-align: center;
+}
+.section-wide .textSection{
+    text-align: left;
+}
+.section-wide .textSection h2{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+footer{
+    grid-area: footer;
+    background-color: rgba(35, 39, 42, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer svg{
+    max-width: 50%;
+}
